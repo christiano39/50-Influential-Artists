@@ -1,0 +1,25 @@
+.artists-container {
+    margin: 4rem auto;
+    padding: 4rem 0;
+    border-top: 2px solid @black;
+    .flex(row, space-around, flex-start);
+
+    .artist {
+        width: 45%;
+        .flex(column, flex-start, center);
+
+        img {
+            border-radius: 1rem;
+            width: 95%;
+        }
+
+        a {
+            font-size: 2.4rem;
+            margin: 1rem 0;
+        }
+
+        .bio {
+            font-size: 1.6rem;
+        }
+    }
+}
