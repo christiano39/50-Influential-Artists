@@ -2,10 +2,7 @@
     margin: 0 auto;
     height: 500px;
     .flex(column, center, center);
-    //background-color: navy;
-    background-image: url(../assets/home.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    .cta-bg-img();
 
     h1 {
         color: @white;
@@ -19,10 +16,7 @@
     }
 
     button {
-        font-size: 2rem;
-        border-radius: 0.5rem;
-        padding: 1rem 3rem;
-        outline: @black;
+        .custom-btn(auto, 2rem);
 
         @media @mobile {
             font-size: 1.6rem;
