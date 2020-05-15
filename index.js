@@ -253,7 +253,7 @@ function removeArtist(artists, index) {
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(artists) {
+function lotsOfArt(artists){
   let manyPaintings = [];
   for (let i = 0; i < artists.length; i++){
     if (artists[i].paintings > 100) {
@@ -263,7 +263,7 @@ function lotsOfArt(artists) {
   return manyPaintings;
 }
 
-//console.log(lotsOfArt(artists));
+// console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -309,7 +309,7 @@ function get20s(artists){
   return bornInTwenties;
 }
 
-//console.log(get20s(artists));
+// console.log(get20s(artists));
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
@@ -339,15 +339,31 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 // }
 
-getHTML();
-
 /* STRETCH 3: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(){
 
-    /* Code here */
+}
 
-  }
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+ function lotsOfArtWithFilter(artists){
+  return artists.filter(artist => artist.paintings > 100);
+}
+
+// console.log(lotsOfArtWithFilter(artists));
+
+function filterArtistYears(artist){
+  let tempArr = artist.years.split(" - ");
+  let yearBorn = parseInt(tempArr[0]);
+  return yearBorn >= 1800 && yearBorn < 1900;
+}
+
+function get20sWithFilter(artists){
+  let bornInTwenties = artists.filter(filterArtistYears);
+  return bornInTwenties;
+}
+
+// console.log(get20sWithFilter(artists));
