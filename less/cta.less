@@ -1,0 +1,34 @@
+.title-container {
+    margin: 0 auto;
+    height: 500px;
+    .flex(column, center, center);
+    .cta-bg-img();
+
+    h1 {
+        color: @white;
+        font-size: 6rem;
+        text-align: center;
+        font-weight: bold;
+
+        @media @mobile {
+            font-size: 4rem;
+        }
+    }
+
+    button {
+        .custom-btn(auto, 2rem);
+
+        @media @mobile {
+            font-size: 1.6rem;
+            padding: 0.5rem 1.5rem;
+        }
+    }
+
+    hr {
+        display: none;
+    }
+
+    @media @mobile {
+        height: 300px;
+    }
+}

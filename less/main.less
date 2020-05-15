@@ -1,0 +1,36 @@
+.artists-container {
+    margin: 4rem auto;
+    padding: 4rem 0;
+    border-top: 2px solid @light-grey;
+    .flex(row, space-evenly, flex-start);
+    width: 900px;
+    max-width: 100%;
+
+    .artist {
+        width: 40%;
+        .flex(column, flex-start, center);
+
+        img {
+            border-radius: 1rem;
+            width: 90%;
+        }
+
+        a {
+            font-size: 2.4rem;
+            margin: 1rem 0;
+        }
+
+        .bio {
+            font-size: 1.6rem;
+        }
+
+        @media @mobile {
+            width: 60%;
+            margin: 2rem auto;
+        }
+    }
+
+    @media @mobile {
+        flex-direction: column;
+    }
+}
