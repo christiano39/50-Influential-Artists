@@ -208,13 +208,13 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
-console.log(artists[0]);
-console.log(artists[2].bio);
+// console.log(artists[0].name);
+// console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
 artists[8].name = "Vincent Van Gogh"
-console.log(artists[8]);
+//console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -246,7 +246,7 @@ function removeArtist(artists, index) {
   return artists;
 }
 
-//console.log(removeArtist(artists, 0));
+//console.log(removeArtist(artists, 14));
   
   /**
 
@@ -287,8 +287,8 @@ function addArtist(artist){
   artists.push(me);
 }
 
-const me = [21, "Christian Arneson", "1996 - Current", "Bad at art", "USA", "Christian is very bad at art"];
-addArtist(me);
+const me = [20, "Christian Arneson", "1996 - Current", "Bad at art", "USA", "Christian is very bad at art"];
+//addArtist(me);
 //console.log(artists);
 
 
@@ -297,11 +297,19 @@ addArtist(me);
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
+function get20s(artists){
+  let bornInTwenties = [];
+  for (let i = 0; i < artists.length; i++) {
+    let tempArr = artists[i].years.split(" - ");
+    let yearBorn = parseInt(tempArr[0]);
+    if (yearBorn >= 1800 && yearBorn < 1900) {
+      bornInTwenties.push(artists[i]);
+    }
   }
+  return bornInTwenties;
+}
+
+//console.log(get20s(artists));
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
@@ -323,12 +331,15 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+// function getHTML(artists){
 
-    /* Code here */
+//   for (const property in artists) {
+//     console.log(property);
+//   }    
 
-  }
+// }
 
+getHTML();
 
 /* STRETCH 3: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
